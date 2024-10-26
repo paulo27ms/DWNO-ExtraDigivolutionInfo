@@ -5,5 +5,5 @@ This mod gives you more digivolution information when you interact with your par
 ## Installation
 
 1. Install [BepInEx](https://github.com/BepInEx/BepInEx) ([Tutorial by Yasha-jin](https://github.com/Yasha-jin/DWNOModdingGuides/blob/main/Guides/HowToInstallBepInExForDWNO.md))
-2. Download the latest release from the [Releases Tab](https://github.com/SydMontague/DWNO-Mod-UnlockAllRequirements/releases)
+2. Download the latest release from the [Releases Tab](https://github.com/paulo27ms/DWNO-ExtraDigivolutionInfo/releases)
 3. Copy the `DWNO_ExtraDigivolutionInfo.dll` into the `plugins` folder of BepinEx
