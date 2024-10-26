@@ -2,6 +2,10 @@
 
 This mod gives you more digivolution information when you interact with your partners or give an item at the dojo.
 
+A config file is available after the first execution with the mod in the BepInEx's plugins folder.
+
+You can configure the amount of extra rolls when handing in an item at the dojo or interacting with your partners, when interacting with Mega or above partners you can configure how many random digimon can be picked and how many digivolution information rolls each should do (only picks from random Ultimate and below digimon).
+
 ## Installation
 
 1. Install [BepInEx](https://github.com/BepInEx/BepInEx) ([Tutorial by Yasha-jin](https://github.com/Yasha-jin/DWNOModdingGuides/blob/main/Guides/HowToInstallBepInExForDWNO.md))
