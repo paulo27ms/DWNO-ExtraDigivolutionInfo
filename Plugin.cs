@@ -26,7 +26,7 @@ public class Plugin : BasePlugin
     {
         infos = Config.Bind("#Dojo", "ExtraInfosDojoItem", 4, "How many extra digivolution info rolls you should get from giving an item at the dojo.");
         infos_known = Config.Bind("#Interaction", "ExtraInfosPartner", 5, "How many extra digivolution info rolls you should get from interacting with your partner.");
-        infos_unknown = Config.Bind("#Interaction", "ExtraInfosRandomCount", 10, "How many random digimon will be selected to perform digivolution info rolls if you're Mega or above.");
+        infos_unknown = Config.Bind("#Interaction", "ExtraInfosRandomCount", 10, "How many random digimon will be selected to perform digivolution info rolls if you'd not unlock any new information after an interaction.");
         infos_per_unknown = Config.Bind("#Interaction", "ExtraInfosPerRandom", 1, "How many digivolution info rolls will be done per random digimon picked above.");
         Logger = Log;
         Harmony.CreateAndPatchAll(typeof(Plugin));
