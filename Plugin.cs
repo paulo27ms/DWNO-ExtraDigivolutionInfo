@@ -5,8 +5,6 @@ using BepInEx.Configuration;
 using BepInEx.Logging;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
-using Il2CppSystem.Reflection;
-
 
 namespace ExtraDigivolutionInfo;
 
@@ -52,6 +50,7 @@ public class Plugin : BasePlugin
         MainGameManager instance = MainGameManager.m_instance;
         EvolutionDojo evolutionDojo = instance.evolutionDojo;
         ParameterDigimonData defaultData = partnerCtrl.m_data.m_defaultData;
+
         if (defaultData.m_growth <= 4)
         {
             uint id = defaultData.m_id;
@@ -59,8 +58,10 @@ public class Plugin : BasePlugin
 
             __result += "\n" + message;
         }
-        else
-        {
+
+        __result = __result.Trim();
+
+        if (string.IsNullOrEmpty(__result)) {
             List<uint> Digimons = new List<uint>();
             foreach (ParameterDigimonData @params in AppMainScript.Ref.m_parameters.m_csvbDigimonData.m_params)
             {
@@ -69,6 +70,7 @@ public class Plugin : BasePlugin
                     Digimons.Add(@params.m_id);
                 }
             }
+
             Random random = new Random();
             int digimonCount = Digimons.Count;
             for (int i = digimonCount - 1; i > 1; i--)
@@ -78,9 +80,9 @@ public class Plugin : BasePlugin
                 Digimons[i] = Digimons[j];
                 Digimons[j] = temp;
             }
+
             int success_counter = 0;
             int global_counter = 0;
-            __result = __result.Trim();
             while (success_counter < infos_unknown.Value)
             {
                 if (global_counter == Digimons.Count) break;
